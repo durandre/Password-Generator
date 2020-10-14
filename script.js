@@ -9,10 +9,8 @@ var confirmNumber;
 var confirmspecialChar;
 var confirmUppercase;
 var confirmLowercase;
+var passwordLength;
 
-
-
-// Write password to the #password input
 function determineLength() {
   confirmLength = prompt("Choose how many characters you'd like your password to be between 8-128 characters : ");
     if (confirmLength < 8){
@@ -43,31 +41,31 @@ function determineLength() {
     console.log(lowercaseCheck);
 }
 
-var characters = lowercaseChar;
+var characters = lowercase;
 var password = "";
-if (uppercaseCheck && numberCheck && specialCheck){
-  characters += uppercaseChar + numberChar + specialChar;
+if (uppercaseCheck && numberCheck && specialCharCheck){
+  characters += uppercase + number + specialChar;
 
 }else if (uppercaseCheck && numberCheck){
-  characters += uppercaseChar + numberChar;
+  characters += uppercase + number;
 
 }else if (numberCheck && specialCheck){
-  characters += numberChar + specialChar;
+  characters += number + specialChar;
 
 }else if (uppercaseCheck && specialCheck){
-  characters += uppercaseChar + specialChar;
+  characters += uppercase + specialChar;
 
 }else if (uppercaseCheck){
-  characters += uppercaseChar;
+  characters += uppercase;
 
 }else if(numberCheck){
-  characters += numberChar;
+  characters += number;
 
 }else if (specialCheck){
   characters += specialChar;
 
 }else{
-  characters === lowercaseChar;
+  characters === lowercase;
 }
 
   for(var i = 0; i < passwordLength; i++){
